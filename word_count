@@ -1,0 +1,18 @@
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ jps
+32209 DataNode
+33063 NodeManager
+32024 NameNode
+32715 ResourceManager
+32443 SecondaryNameNode
+37935 Jps
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ hdfs dfs -cat /user/hadoop/output/part-00000
+Hadoop	3
+Python	1
+fun	1
+is	2
+learn	1
+powerful	1
+to	1
+with	1
+works	1
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ 
