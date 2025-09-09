@@ -15,4 +15,8 @@ powerful	1
 to	1
 with	1
 works	1
-hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ 
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ nano input.py
+
+Hadoop is fun to learn
+Hadoop is powerful
+Python works with Hadoop
