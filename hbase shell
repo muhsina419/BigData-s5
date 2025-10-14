@@ -1,0 +1,48 @@
+hbase shell
+HBase Shell
+Use "help" to get list of supported commands.
+Use "exit" to quit this interactive shell.
+For Reference, please visit: http://hbase.apache.org/2.0/book.html#shell
+Version 2.5.12-hadoop3, r3c34f7a029b3b317478eb05b486ece7c77b341e4, Fri Jul 18 12:54:06 PDT 2025
+Took 0.0008 seconds                                                             
+hbase:001:0> status
+1 active master, 0 backup masters, 1 servers, 0 dead, 2.0000 average load
+Took 0.3164 seconds                                                             
+hbase:002:0> version
+2.5.12-hadoop3, r3c34f7a029b3b317478eb05b486ece7c77b341e4, Fri Jul 18 12:54:06 PDT 2025
+Took 0.0002 seconds                                                             
+hbase:003:0> list
+TABLE                                                                           
+0 row(s)
+Took 0.0142 seconds                                                             
+=> []
+hbase:004:0> create 'students', 'info'
+Created table students
+Took 0.6520 seconds                                                             
+=> Hbase::Table - students
+hbase:005:0> put 'students', '1', 'info:name', 'Alice'
+Took 0.0845 seconds                                                             
+hbase:006:0> put 'students', '1', 'info:age', '22'
+Took 0.0038 seconds                                                             
+hbase:007:0> put 'students', '2', 'info:name', 'Bob'
+Took 0.0035 seconds                                                             
+hbase:008:0> scan 'students'
+ROW                   COLUMN+CELL                                               
+ 1                    column=info:age, timestamp=2025-10-14T15:19:08.254, value=
+                      22                                                        
+ 1                    column=info:name, timestamp=2025-10-14T15:19:08.237, value
+                      =Alice                                                    
+ 2                    column=info:name, timestamp=2025-10-14T15:19:08.270, value
+                      =Bob                                                      
+2 row(s)
+Took 0.0166 seconds                                                             
+hbase:009:0> alter 'students', NAME => 'details'
+Updating all regions with the new schema...
+1/1 regions updated.
+Done.
+Took 1.6535 seconds                                                             
+hbase:010:0> disable 'students'
+Took 0.3296 seconds                                                             
+hbase:011:0> drop 'students'
+Took 0.1265 seconds                                                             
+hbase:012:0> nano student_operations.hbase
