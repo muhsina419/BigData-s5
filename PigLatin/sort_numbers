@@ -1,0 +1,35 @@
+nano numbers.txt 
+
+2
+10
+27
+29
+90
+26
+89
+12
+6
+
+nano sort_numbers.pi
+-- Load the data from the input file
+numbers = LOAD 'numbers.txt' USING PigStorage('\n') AS (num:int);
+
+-- Sort the numbers in ascending order
+sorted_numbers = ORDER numbers BY num ASC;
+
+-- Store the sorted output into a folder
+STORE sorted_numbers INTO 'output_sort_numbers' USING PigStorage('\t');
+
+pig -x local sort_numbers.pigcat output_sort_numbers/part-r-00000
+
+2
+6
+10
+12
+26
+27
+29
+89
+90
+
+
