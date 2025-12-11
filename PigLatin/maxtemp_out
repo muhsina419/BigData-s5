@@ -20,3 +20,4 @@ grunt> DUMP max_temp_by_year;
 2017,10.0
 grunt> STORE max_temp_by_year INTO 'output/max_temp_by_year' USING PigStorage(',');
 grunt> cat output/max_temp_by_year/part-r-00000
+grunt> quit;
