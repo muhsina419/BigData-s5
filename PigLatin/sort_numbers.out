@@ -1,1 +1,10 @@
-hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ hdfs dfs -cat /user/hadoop/output/sorted/part-r-00000
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ pig -x local sort_numbers.pigcat output_sort_numbers/part-r-00000
+2
+6
+10
+12
+26
+27
+29
+89
+90
