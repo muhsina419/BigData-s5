@@ -1,0 +1,6 @@
+hadoop@vmuser-Standard-PC-Q35-ICH9-2009:~$ cat output/max_temperature_by_year/part-r-00000
+2013,10.0
+2014,38.5
+2015,37.75
+2016,38.272728
+2017,10.0
